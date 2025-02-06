@@ -31,6 +31,7 @@ function newt_sqrt2()
 		fprintf("Converged to %0.10f in %g iterations.\n",x,iters-1);
 
 		%semilogy([1:iters+1],y_iters,'Linewidth',1.5);	
+		%hold on
 		%title('Newton method applied to $f(x)=x^2-1$');
 		%xlabel('iteration');
 		%ylabel('error');
