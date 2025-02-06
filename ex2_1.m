@@ -1,10 +1,10 @@
-function ex2_1()
+function varargout = ex2_1()
 	global M v n;
 	M = 6000; v = 1000; n = 5; % define parameters for f(r)
-	fplot(@(r) f(r),[0.01,0.3]) % fplot requires a function handle
-	grid on 
+	%fplot(@(r) f(r),[0.01,0.3]) % fplot requires a function handle
+	%grid on 
 
-	pause % press any key to continue after plotting
+	%pause % press any key to continue after plotting
 
 	a = 0.01; b = 0.1; % initial interval
 		c = (a+b)/2;  % initial midpoint
@@ -18,7 +18,8 @@ function ex2_1()
 			% Throw error if sign(f(a)) = sign(f(b))
 			error("f(a)*f(b) < 0 not met");
 		end
-		% the next three lines just make the output pretty
+		% the next four lines just make the output pretty
+		fprintf("--------------------------\n")
 		fprintf("c_k \t \t err\n")
 		fprintf("--------------------------\n")
 		fprintf("%.10f \t %0.3e \n",c,err); 
@@ -38,13 +39,20 @@ function ex2_1()
 				b = b;
 			end
 			c = (a+b)/2;
-			iters += 1;
 			err = abs(b-a);	
 			y_iters = [y_iters err];
 			fprintf("%.10f \t %0.3e \n",c,err); 
+			iters += 1;
 		end
 		fprintf("==========================\n")
-		fprintf("Converged to %0.10f in %g iterations.\n",c,iters-1);	
+		fprintf("Converged to %0.10f in %g iterations.\n",c,iters);	
+
+		%figure(1)
+		%semilogy([1:iters+1],y_iters,'b','LineWidth',1.5)
+		%hold on
+
+		varargout{1} = [1:iters+1];
+		varargout{2} = y_iters;
 
 
 	function out = f(r)

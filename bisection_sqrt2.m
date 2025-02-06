@@ -12,6 +12,7 @@ function bisection_sqrt2()
 			error("f(a)*f(b) < 0 not met");
 		end
 		% the next three lines just make the output pretty
+		fprintf("--------------------------\n")
 		fprintf("c_k \t \t err\n")
 		fprintf("--------------------------\n")
 		fprintf("%.10f \t %0.3e \n",c,err); 
@@ -31,22 +32,19 @@ function bisection_sqrt2()
 				b = b;
 			end
 			c = (a+b)/2;
-			iters += 1;
 			err = abs(sqrt(2)-c);	
 			y_iters = [y_iters err];
 			fprintf("%.10f \t %0.3e \n",c,err); 
+			iters += 1
 		end
 		fprintf("==========================\n")
-		fprintf("Converged to %0.10f in %g iterations.\n",c,iters-1);
-
-		%figure(1) 
-		%	semilogy([1:iters+1],y_iters,'Linewidth',1.5);	
-		%	title('Bisection method applied to $f(x)=x^2-1$');
-		%	xlabel('iteration');
-		%	ylabel('error');
-		%	grid on;
-
-		%figure(1)
+		fprintf("Converged to %0.10f in %g iterations.\n",c,iters);
+		
+		%semilogy([1:iters+1],y_iters,'Linewidth',1.5);	
+		%title('Bisection method applied to $f(x)=x^2-1$');
+		%xlabel('iteration');
+		%ylabel('error');
+		%grid on;
 
 	function out1 = f(x)
 		out1 = x.^2 - 2;
