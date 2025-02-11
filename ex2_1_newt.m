@@ -32,7 +32,7 @@ function varargout = ex2_1_newt()
 			iters += 1;
 		end
 		fprintf("==========================\n")
-		fprintf("Converged to %0.10f in %g iterations.\n",x,iters);	
+		fprintf("Newton converged to %0.10f in %g iterations.\n",x,iters);	
 
 		%figure(1)
 		%semilogy([1:iters+1],y_iters,'r','LineWidth',1.5);

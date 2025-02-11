@@ -39,7 +39,7 @@ function ex2_9()
 	v_err = []; p_err = [];
 
 	% initial guesses
-	x_v = 1;
+	x_v = 1; 
 	x_p = x_v;
 
 	% Verhulst model

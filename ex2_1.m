@@ -45,7 +45,7 @@ function varargout = ex2_1()
 			iters += 1;
 		end
 		fprintf("==========================\n")
-		fprintf("Converged to %0.10f in %g iterations.\n",c,iters);	
+		fprintf("Bisection method converged to %0.10f in %g iterations.\n",c,iters);	
 
 		%figure(1)
 		%semilogy([1:iters+1],y_iters,'b','LineWidth',1.5)

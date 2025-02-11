@@ -4,7 +4,7 @@ f = @(r) M - v * (1+r)./r .* ( (1+r).^n - 1);
 	
 [k_b,err_b] = ex2_1; 
 [k_n,err_n] = ex2_1_newt;
-[~,k_s,err_s] = secant(0.3,-0.3,f,50,1e-12);
+[~,k_s,err_s] = secant(0.3,-0.3,f,50,1e-12,'report');
 
 figure(1)
 hold on
