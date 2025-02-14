@@ -21,8 +21,8 @@ function fft_demo()
 	% read the audio file and return vector `chord' and sampling rate `fs'
 	[chord,fs] = audioread('d_chord_32bit.wav'); 
 
-	% uncomment line 23 to hear chord
-	player = audioplayer(chord,fs); play(player); pause(4); return
+	% uncomment next line to hear chord
+	%player = audioplayer(chord,fs); play(player); pause(4); return
 	
 	% define time domain 
 	dt = 1/fs; t = 0:dt:length(chord)/fs;
