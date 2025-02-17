@@ -57,6 +57,18 @@ function runge_function(n)
 	plot(cheby_nodes,runge(cheby_nodes),'ok','linewidth',2.0);
 	grid on;
 
+	% figure(4) plots the Chebyshev nodes on the x axis in [-1,1]
+	% on maps them on the unit circle. Note that they are equally 
+	% spaced on the unit circle, but not in [-1,1]. 
+	tt = linspace(-1,1,1e4);
+	figure(4)
+	hold on; grid on;
+	cheby_nodes_1 = cos(pi*z);
+	plot(cheby_nodes_1,sqrt(1-cheby_nodes_1.^2),'o','linewidth',2.0);
+	plot(cheby_nodes_1,zeros(1,length(cheby_nodes_1)),'*','linewidth',2.0);
+	plot(tt,sqrt(1-tt.^2),'linewidth',2.0);
+		
+
 	function out = runge(x)
 		out = 1./(1+x.^2);
 
