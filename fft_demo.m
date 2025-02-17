@@ -8,7 +8,8 @@ function fft_demo()
 		domain. 
 
 		The Fast Fourier Transform (fft) allows us to very quickly compute 
-		the discrete Fourier transform. 
+		the discrete Fourier transform (exploring the fft would make for 
+		a great final project). 
 
 		This function demonstrates the fft by 
 		taking an audio file in which a musical chord is 
@@ -65,4 +66,3 @@ function fft_demo()
 		
 	figure(5)
 	plot(hz,mag,'linewidth',3.0);
-
