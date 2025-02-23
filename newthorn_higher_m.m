@@ -21,7 +21,7 @@ fprintf('------------------------------------------\n');
 
 a = [1 -2 1 0];
 
-[roots,iters] = newton_horner(a,0.25,1e-8,200)
+[roots,iters] = newton_horner(a,0.25,1e-12,200)
 
 fprintf('------------------------------------------\n');
 fprintf('Roots to find:\t -3\t -1\t 1\t 4\n');
@@ -30,4 +30,4 @@ fprintf('------------------------------------------\n');
 
 a = [1 -8 2 100 -115 -284 112 192];
 
-[roots,iters] = newton_horner(a,10,1e-8,200)
+[roots,iters] = newton_horner(a,10,1e-12,200)

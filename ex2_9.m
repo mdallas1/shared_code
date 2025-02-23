@@ -16,7 +16,6 @@ function ex2_9()
 
 	%}
 
-  ##
 	close all;
 
 	global r K

@@ -49,15 +49,15 @@ function aitkens_vis()
 		plot(x,err,'o','linewidth',2.0);
 		lbl = sprintf('%g',iters);
 		if iters < 7
-			text(x+iters*log(iters+1)*1e-2,err+log(iters+1)*1e-2,lbl,'fontsize',20);
+			text(x+iters*log(iters+1)*1e-2,err+log(iters+1)*1e-2,lbl,'fontsize',30);
 		end
 		
 	end	
 	t = linspace(0,2); 
 	c = polyfit(nodes,y,1); 
 	plt = plot(t,polyval(c,t),'--','linewidth',2.0);
-	legend(plt(end),'approximate line containing iterates');
-	set(gca,'fontsize',20); 
+	legend(plt(end),'approximate line containing iterates','fontsize',40,'location','northwest');
+	set(gca,'fontsize',40); 
 	if err < tol 	
 		fprintf('Standard method converged to %g in %g iterations.\n',x,iters);
 	else 
