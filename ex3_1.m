@@ -41,7 +41,7 @@ function ex3_1()
 	t = linspace(x(1),x(end));
 	figure(1) 
 	hold on; grid on; 
-	plot(t,polyval(c,t),'linewidth',2.0);
+	%plot(t,polyval(c,t),'linewidth',2.0);
 	plot(x_full,y_full,'o','linewidth',2.0);
 		
 	
