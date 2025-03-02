@@ -26,7 +26,7 @@ function fft_demo()
 	%player = audioplayer(chord,fs); play(player); pause(4); return
 	
 	% define time domain 
-	dt = 1/fs; t = 0:dt:length(chord)/fs;
+	dt = 1/fs; t = 0:dt:length(chord)/fs; 
 	
 	% uncomment line 29 to see audio file
 	figure(1)
@@ -66,3 +66,4 @@ function fft_demo()
 		
 	figure(5)
 	plot(hz,mag,'linewidth',3.0);
+	xlim([0,1e3]);

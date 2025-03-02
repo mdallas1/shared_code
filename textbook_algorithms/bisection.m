@@ -28,9 +28,8 @@ end
 niter = 0;
 I = (b - a)*0.5;
 while I >= tol && niter < nmax
-		niter = niter + 1; 
+		niter = niter + 1;
 	if fx(1)*fx(2) < 0
-		niter = 0; niter = 0;
 		x(3) = x(2);
 		x(2) = x(1)+(x(3)-x(1))*0.5; 
 		fx = fun(x,varargin{:});

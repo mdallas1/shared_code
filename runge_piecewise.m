@@ -15,6 +15,7 @@ function runge_piecewise(n)
 	t = linspace(-5,5); 
 	figure(1)
 	hold on; grid on;
-	plot(t,interp1(nodes,y,t),'linewidth',2.0,nodes,y,'o','linewidth',2.0);
-	plot(t,f(t),'--','linewidth',1.5);
+	%plot(t,interp1(nodes,y,t),'linewidth',2.0,nodes,y,'o','linewidth',2.0);
+	%plot(t,f(t),'--','linewidth',1.5);
+	plot(t,interp1(nodes,y,t),'linewidth',2.0)
 
