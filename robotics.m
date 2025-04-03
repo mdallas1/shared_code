@@ -18,7 +18,7 @@ function robotics()
 	t1 = [0 1 2]; x1 = [0 1 4]; y1 = [0 2 4];
 	t2 = [2 3 5]; x2 = [4 3 0]; y2 = [4 1 0]; 
 	x1_vals = cubicspline(t1,x1,0:.01:2,0,[0 0]);
-	%x1_vals = spline(t1,[0 x1 0],0:0.01:2); % Octave's built in complete spline
+	%x1_vals = spline(t1,x1,0:0.01:2); % Octave's built in complete spline
 	y1_vals = cubicspline(t1,y1,0:.01:2,0,[0 0]);
 	%y1_vals = spline(t1,[0 y1 0],0:0.01:2); 
 	x2_vals = cubicspline(t2,x2,2:.01:5,0,[0 0]);
@@ -31,4 +31,7 @@ function robotics()
 	plot([0 1 4 3 0],[0 2 4 1 0],'*k','linewidth',2.0);
 	quiver(0.8,2.1,0.5,0.5,'b','linewidth',1.5);
 	quiver(3.1,0.78,-0.5,-0.75,'r','linewidth',1.5);
+
+	figure(2)
+	plot(0:0.01:2,x1_vals,'linewidth',1.5);
 

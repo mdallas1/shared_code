@@ -6,7 +6,7 @@ function ex3_8()
 	
 	%}
 
-	close all
+	%close all
 
 	f1 = @(x) sin(x); f2 = @(x) sin(5*x); f3 = @(x) sin(3*x);
 	f = @(x) f1(x) + f2(x);

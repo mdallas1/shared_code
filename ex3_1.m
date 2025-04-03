@@ -36,6 +36,8 @@ function ex3_1()
 	
 	% get the coefficients for the deg 4 interpolating polynomial
 	c = polyfit(x,y,4);
+
+	c_lstsqr = polyfit(x_full,y_full,4)
 	
 	% plot nodes and interpolant 
 	t = linspace(x(1),x(end));
